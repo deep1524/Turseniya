@@ -96,7 +96,7 @@ const About = () => {
     <div className="w-full mt-8">
       <Navbar />
       <div className="-mt-20">
-        <img src="https://qfnextseoimgs.netlify.app/images/aboutusbg.jpg"></img>
+        <img className='w-full' src="https://qfnextseoimgs.netlify.app/images/aboutusbg.jpg"></img>
       </div>
 
       {/* 1st section  */}
@@ -130,6 +130,8 @@ const About = () => {
           </div>
         </div>
       </div>
+
+      
       {/* // 2nd section */}
 
       <div className="bg-sky-700 py-28 sm:py-32 ">
