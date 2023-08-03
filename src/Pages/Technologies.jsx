@@ -309,29 +309,31 @@ const Technologies = () => {
         </div>
       </div>
       {/* // 2nd Section  */}
-      <div className="bg-white py-28 sm:py-32 ">
+      <div className="bg-violet-600 py-28 sm:py-32 ">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto mt-2 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t rounded-lg  border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-2">
             <div>
-              <p className=" text-2xl mb-4 text-black">About the Company</p>
+              <p className=" text-2xl mb-4 text-black">Technology Simplified</p>
               <p>
-                We at Quadrafort assist our customers in enhancing Productivity
-                and Business Efficiency achieved by our best in class Cloud
-                Solutions and innovative 360° consulting services. We are an
-                end-to-end technology services provider assisted by a team of
-                certified technologists aided by domain experience & proficiency
-                garnered across industries and business verticals. We endeavour
-                to empower organisations in their digital transformation journey
-                with least disruption with emphasis on proper adoption, to aid
-                in achieving complex business goals. We work across industries
-                encompassing manufacturing, retail, hi-tech, government, IT,
-                NBFC, Fintech and Media.
+                Before the days of ubiquitous SaaS products and services, tech
+                stacks were relatively simple: there was LAMP (Linux, Apache,
+                MySQL, PHP), an older standard for building PHP-based web
+                applications, and non-open source alternatives like WAMP (for
+                those that preferred Windows to Linux). Today, however, there is
+                a wealth of tools that product teams and engineers can combine
+                to build and maintain the perfect product for their market
+                segment. An early stage company still finding traction might
+                lean toward low-cost, flexible options they can switch out
+                later, while another might choose technology that maximizes
+                scalability, so they can meet the demands of enterprise
+                customers. At Quadrafort we consult and advise to adapt the best
+                fit basis customer’s need
               </p>
             </div>
             <div className="card-body bg-white">
               <figure>
                 <img
-                  src="https://quadrafort.com/_next/static/media/team-smile.25a95be6.png"
+                  src="https://quadrafort.com/_next/static/media/cube_side1.e4b65838.jpeg"
                   alt="Shoes"
                 />
               </figure>

@@ -8,7 +8,7 @@ const navigation = [
   { name: 'Technologies', href: '/technologies', current: false },
   { name: 'Industries', href: '#', current: false },
   { name: 'Services', href: '#', current:false },
-  { name: 'Careers', href: '#', current: false },
+  { name: 'Careers', href: '/careers', current: false },
   { name: 'Contact us', href: '/contact', current: false },
 ]
 

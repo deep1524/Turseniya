@@ -6,6 +6,7 @@ import Contact from "../Pages/Contact";
 import Home from "../Pages/Home";
 import  About  from "../Pages/About";
 import Technologies from "../Pages/Technologies";
+import Careeers from "../Pages/Careeers";
 
 const AllRoute = () => {
   return (
@@ -15,6 +16,7 @@ const AllRoute = () => {
       <Route path="/about" element={<About />}></Route>
       <Route path="/contact" element={<Contact />}></Route>
       <Route path="/technologies" element={<Technologies />}></Route>
+      <Route path="/careers" element={<Careeers />}></Route>
     </Routes>
   );
 };

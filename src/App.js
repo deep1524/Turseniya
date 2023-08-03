@@ -6,6 +6,7 @@ import AllRoute from './Components/AllRoute';
 import Home from './Pages/Home';
 import About from './Pages/About';
 import Contact from './Pages/Contact';
+import Slider from './Pages/Slider';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       {/* <Footer/>   */}
       {/* <Home/> */}
       {/* <Contact/> */}
+      {/* <Slider/> */}
     </div>
     
   );
