@@ -9,7 +9,7 @@ import Technologies from "../Pages/Technologies";
 import Careeers from "../Pages/Careeers";
 
 const AllRoute = () => {
-  // all route 
+  // all route done
   return (
     <Routes>
       <Route path="/" element={<Home/>}></Route>
