@@ -111,7 +111,7 @@ const Technologies = () => {
     {
       id: 7,
       title: "Boost your conversion rate",
-      href: "#",
+      href: "http://quadrafort.com/_next/static/media/tech_awslogo.e420b971.png",
       description:
         "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.",
       date: "Mar 16, 2020",
@@ -128,7 +128,7 @@ const Technologies = () => {
     {
       id: 5,
       title: "Boost your conversion rate",
-      href: "#",
+      href: "http://quadrafort.com/_next/static/media/tech_flutterlogo.7626e0a9.png",
       description:
         "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.",
       date: "Mar 16, 2020",
@@ -145,7 +145,7 @@ const Technologies = () => {
     {
       id: 8,
       title: "Boost your conversion rate",
-      href: "#",
+      href: "http://quadrafort.com/_next/static/media/tech_nodejslogo.68e97f61.png",
       description:
         "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.",
       date: "Mar 16, 2020",
@@ -162,7 +162,7 @@ const Technologies = () => {
     {
       id: 9,
       title: "Boost your conversion rate",
-      href: "#",
+      href: "http://quadrafort.com/_next/static/media/MongoDB_Logo.ac22d621.png",
       description:
         "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.",
       date: "Mar 16, 2020",
@@ -179,7 +179,7 @@ const Technologies = () => {
     {
       id: 10,
       title: "Boost your conversion rate",
-      href: "#",
+      href: "http://quadrafort.com/_next/static/media/tech_jquery.79036d37.png",
       description:
         "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.",
       date: "Mar 16, 2020",
@@ -196,7 +196,7 @@ const Technologies = () => {
     {
       id: 11,
       title: "Boost your conversion rate",
-      href: "#",
+      href: "http://quadrafort.com/_next/static/media/tech_ms-logo.4c4cdd47.png",
       description:
         "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.",
       date: "Mar 16, 2020",
@@ -213,7 +213,7 @@ const Technologies = () => {
     {
       id: 12,
       title: "Boost your conversion rate",
-      href: "#",
+      href: "http://quadrafort.com/_next/static/media/tech_heroku.d81bfd8e.png",
       description:
         "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.",
       date: "Mar 16, 2020",
@@ -230,7 +230,7 @@ const Technologies = () => {
     {
       id: 13,
       title: "Boost your conversion rate",
-      href: "#",
+      href: "http://quadrafort.com/_next/static/media/tech_reactlogo.479af87f.png",
       description:
         "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.",
       date: "Mar 16, 2020",
@@ -247,7 +247,7 @@ const Technologies = () => {
     {
       id: 14,
       title: "Boost your conversion rate",
-      href: "#",
+      href: "http://quadrafort.com/_next/static/media/tech_pwalogo.4aa00d6d.png",
       description:
         "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.",
       date: "Mar 16, 2020",
@@ -264,7 +264,7 @@ const Technologies = () => {
     {
       id: 15,
       title: "Boost your conversion rate",
-      href: "#",
+      href: "http://quadrafort.com/_next/static/media/tech_java.efa89eb2.png",
       description:
         "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.",
       date: "Mar 16, 2020",
@@ -307,9 +307,9 @@ const Technologies = () => {
           </div>
           {technologydata.length!==0 ? <div className="mx-auto mt-2 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t rounded-lg  border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-4 ">
             {technologydata.map((post) => (
-              <div className="card card-compact max-w-sm shadow-xl h-60 bg-white">
-                <figure className="w-40 h-40 mx-auto mt-auto mb-auto ">
-                  <img src={post.href} alt="aws" />
+              <div className="card card-compact max-w-sm shadow-xl h-60 bg-white ">
+                <figure className="w-48 h-48 mx-auto mt-auto mb-auto p-10 ">
+                  <img className="object-cover"  src={post.href} alt="aws" />
                 </figure>
               </div>
             ))}

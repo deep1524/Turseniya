@@ -300,7 +300,7 @@ const Home = () => {
                     <Skeleton circle={true} width={100} height={100} />
                   </figure>
                   <div className="card-body">
-                    <h2 className="card-title">
+                    <h2>
                       <Skeleton />
                     </h2>
                     <p>
@@ -463,7 +463,7 @@ const Home = () => {
                     <Skeleton circle={true} width={100} height={100} />
                   </figure>
                   <div className="card-body">
-                    <h2 className="card-title mb-8">
+                    <h2 className=" mb-8">
                       <Skeleton />
                     </h2>
                     <p>
