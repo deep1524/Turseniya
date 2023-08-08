@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
-
+import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
 const Technologies = () => {
+  const [technologydata, settechnologydata] = useState([])
   const data = [
     {
       id: 1,
@@ -279,6 +281,12 @@ const Technologies = () => {
 
     // More posts...
   ];
+  useEffect(() => {
+    setTimeout(function () {
+     
+      settechnologydata(data);
+    }, 1000);
+  }, []);
   return (
     <div className="w-full mt-8">
       <Navbar />
@@ -297,15 +305,24 @@ const Technologies = () => {
               Technologies
             </p>
           </div>
-          <div className="mx-auto mt-2 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t rounded-lg  border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-4 ">
-            {data.map((post) => (
+          {technologydata.length!==0 ? <div className="mx-auto mt-2 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t rounded-lg  border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-4 ">
+            {technologydata.map((post) => (
               <div className="card card-compact max-w-sm shadow-xl h-60 bg-white">
                 <figure className="w-40 h-40 mx-auto mt-auto mb-auto ">
                   <img src={post.href} alt="aws" />
                 </figure>
               </div>
             ))}
-          </div>
+          </div> : <div className="mx-auto mt-2 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t rounded-lg  border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-4 ">
+            {data.map((post) => (
+              <div className="card card-compact max-w-sm shadow-xl h-60 bg-white">
+                <figure className="w-40 h-40 mx-auto mt-auto mb-auto ">
+                 <Skeleton width={200} height={200}/>
+                </figure>
+              </div>
+            ))}
+          </div>}
+         
         </div>
       </div>
       {/* // 2nd Section  */}

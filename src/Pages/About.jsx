@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
-
+import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
 const About = () => {
+  const [aboutdata, setAboutdata] = useState([])
   const data = [
     {
       id: 1,
@@ -92,6 +94,14 @@ const About = () => {
 
     // More posts...
   ];
+
+  useEffect(() => {
+    setTimeout(function () {
+      setAboutdata(data);
+      
+    }, 1000);
+  }, []);
+
   return (
     <div className="w-full mt-8">
       <Navbar />
@@ -141,8 +151,8 @@ const About = () => {
               What We Do?
             </p>
           </div>
-          <div className=" mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t rounded-lg  border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-            {data.map((post) => (
+          {aboutdata.length!==0? <div className=" mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t rounded-lg  border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+            {aboutdata.map((post) => (
               <div className="card max-w-md max-h-96  bg-white  shadow-xl">
                 <figure className="w-28 ml-7 mt-6">
                   <img
@@ -159,7 +169,23 @@ const About = () => {
                 </div>
               </div>
             ))}
-          </div>
+          </div> : <div className=" mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t rounded-lg  border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+            {data.map((post) => (
+              <div className="card max-w-md max-h-96  bg-white  shadow-xl">
+                <figure className="w-28 ml-7 mt-6">
+                 <Skeleton circle={true} width={100} height={100}/>
+                </figure>
+                <div className="card-body">
+                  <h2 className="card-title mb-2"><Skeleton/></h2>
+                  <p><Skeleton/></p>
+                  <p><Skeleton/></p>
+                  <p><Skeleton/></p>
+                  <p><Skeleton/></p>
+                </div>
+              </div>
+            ))}
+          </div>}
+         
         </div>
       </div>
 
@@ -171,8 +197,8 @@ const About = () => {
               Quadrafort Excellence Framework
             </p>
           </div>
-          <div className="mx-auto mt-2 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t rounded-lg  border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-            {data.map((post) => (
+          {aboutdata.length!==0 ?<div className="mx-auto mt-2 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t rounded-lg  border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+            {aboutdata.map((post) => (
               <div className="card card-compact max-w-sm bg-base-100 shadow-xl">
                 <figure>
                   <img
@@ -197,7 +223,30 @@ const About = () => {
                 </div>
               </div>
             ))}
-          </div>
+          </div> :<div className="mx-auto mt-2 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t rounded-lg  border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+            {data.map((post) => (
+              <div className="card card-compact max-w-sm  shadow-xl">
+                <figure>
+                <Skeleton width={300} height={200}/>
+                </figure>
+                <div className="card-body bg-white">
+                  <h2 className=" font-bold text-xl text-blue-600">
+                  <Skeleton/>
+                  </h2>
+                  <p className="  text-black ">
+                    <Skeleton/>
+                  </p>
+                  <p className=" font-normal text-black ">
+                  <Skeleton/>
+                  </p>
+                  <p className=" text-black ">
+                  <Skeleton/>
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>}
+          
         </div>
       </div>
       <Footer />

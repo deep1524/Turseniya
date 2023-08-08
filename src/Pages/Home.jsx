@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
-
+import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
 const Home = () => {
+  const [data1, setdata1] = useState([]);
+  const [data2, setdata2] = useState([]);
   const posts = [
     {
       id: 1,
@@ -181,6 +184,14 @@ const Home = () => {
 
     // More posts...
   ];
+
+  useEffect(() => {
+    setTimeout(function () {
+      setdata1(posts);
+      setdata2(data);
+    }, 1000);
+  }, []);
+
   return (
     <>
       <Navbar />
@@ -244,6 +255,7 @@ const Home = () => {
         </div>
       </div>
       {/* crousal end */}
+
       {/* // 1st section */}
       <div className="bg-white py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -259,24 +271,49 @@ const Home = () => {
           </div>
 
           {/* // card */}
-
-          <div className="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t rounded-lg  border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-            {posts.map((post) => (
-              <div className="card max-w-sm bg-base-100 shadow-xl">
-                <figure className="w-28 ml-7 mt-6">
-                  <img
-                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Salesforce.com_logo.svg/2560px-Salesforce.com_logo.svg.png"
-                    alt="Shoes"
-                  />
-                </figure>
-                <div className="card-body">
-                  <h2 className="card-title">SAP</h2>
-                  <p>SAP solution is tailored to support your business needs in your industry and any geography for the digital age</p>
-                  <p>Learn More</p>
+          {data1.length != 0 ? (
+            <div className="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t rounded-lg  border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+              {data1.map((post) => (
+                <div className="card max-w-sm bg-base-100 shadow-xl">
+                  <figure className="w-28 ml-7 mt-6">
+                    <img
+                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Salesforce.com_logo.svg/2560px-Salesforce.com_logo.svg.png"
+                      alt="Shoes"
+                    />
+                  </figure>
+                  <div className="card-body">
+                    <h2 className="card-title">SAP</h2>
+                    <p>
+                      SAP solution is tailored to support your business needs in
+                      your industry and any geography for the digital age
+                    </p>
+                    <p>Learn More</p>
+                  </div>
                 </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          ) : (
+            <div className="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t rounded-lg  border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+              {posts.map((post) => (
+                <div className="card max-w-sm  shadow-xl">
+                  <figure className="w-28 ml-7 mt-6">
+                    <Skeleton circle={true} width={100} height={100} />
+                  </figure>
+                  <div className="card-body">
+                    <h2 className="card-title">
+                      <Skeleton />
+                    </h2>
+                    <p>
+                      <Skeleton />
+                    </p>
+                    <p>
+                      <Skeleton />
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
       </div>
 
@@ -288,15 +325,31 @@ const Home = () => {
               Profile At A Glance
             </p>
           </div>
-          <div className="mx-auto mt-2 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t rounded-lg  border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-            {posts.map((post) => (
-              <div className="card max-w-sm bg-base-100 shadow-xl">
-                <div className="artboard artboard-horizontal  h-60 bg-red-400 rounded-lg">
-                  568×320
+          {data1.length !== 0 ? (
+            <div className="mx-auto mt-2 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t rounded-lg  border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+              {data1.map((post) => (
+                <div className="card max-w-sm bg-base-100 shadow-xl">
+                  <div className="artboard artboard-horizontal  h-60 bg-red-400 rounded-lg">
+                    568×320
+                  </div>
                 </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          ) : (
+            <div className="mx-auto mt-2 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t rounded-lg  border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+              {" "}
+              {posts.map((post) => (
+                <div className="card max-w-sm bg-base-100 shadow-xl">
+                  <div className="artboard artboard-horizontal  h-60 bg-white rounded-lg">
+                    <h1>
+                      <Skeleton />{" "}
+                    </h1>
+                  </div>
+                </div>
+              ))}{" "}
+            </div>
+          )}
+          // skelton start // skelton end
         </div>
       </div>
 
@@ -309,28 +362,52 @@ const Home = () => {
               Our Core Differentiators
             </p>
           </div>
-          <div className="mx-auto mt-2 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t rounded-lg  border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-4">
-            {data.map((post) => (
-              <div className="card card-compact max-w-sm bg-base-100 shadow-xl">
-                <figure>
-                  <img
-                    src="https://media.istockphoto.com/id/506910700/photo/i-can-do-it.jpg?s=612x612&w=0&k=20&c=4r5UQKSwjtVyLai0R0B38RJXX2SFr0TpK4JFSWnVCfQ="
-                    alt="Shoes"
-                  />
-                </figure>
-                <div className="card-body bg-white">
-                  <h2 className="card-title font-bold text-black">
-                    Contemporary
-                  </h2>
-                  <p className="mt-10 mb-10 text-black">
-                    Our team has expertise in a host of contemporary solutions
-                    such as Salesforce, SAP,...
-                  </p>
-                  <p className="text-black">Learn More</p>
+
+          {data2.length !== 0 ? (
+            <div className="mx-auto mt-2 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t rounded-lg  border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-4">
+              {data2.map((post) => (
+                <div className="card card-compact max-w-sm bg-base-100 shadow-xl">
+                  <figure>
+                    <img
+                      src="https://media.istockphoto.com/id/506910700/photo/i-can-do-it.jpg?s=612x612&w=0&k=20&c=4r5UQKSwjtVyLai0R0B38RJXX2SFr0TpK4JFSWnVCfQ="
+                      alt="Shoes"
+                    />
+                  </figure>
+                  <div className="card-body bg-white">
+                    <h2 className="card-title font-bold text-black">
+                      Contemporary
+                    </h2>
+                    <p className="mt-10 mb-10 text-black">
+                      Our team has expertise in a host of contemporary solutions
+                      such as Salesforce, SAP,...
+                    </p>
+                    <p className="text-black">Learn More</p>
+                  </div>
                 </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          ) : (
+            <div className="mx-auto mt-2 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t rounded-lg  border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-4">
+              {data.map((post) => (
+                <div className="card card-compact max-w-sm  shadow-xl">
+                  <figure>
+                    <Skeleton width={300} height={200} />
+                  </figure>
+                  <div className="card-body">
+                    <h1 className=" font-bold text-black">
+                      <Skeleton />
+                    </h1>
+                    <p className="mt-10 mb-10 text-black">
+                      <Skeleton />
+                    </p>
+                    <p className="text-black">
+                      <Skeleton />
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
       </div>
 
@@ -343,40 +420,84 @@ const Home = () => {
               What We Do?
             </p>
           </div>
-          <div className=" mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t rounded-lg  border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-4">
-            {data.map((post) => (
-              <div className="card max-w-sm  bg-white  shadow-xl">
-                <figure className="w-28 ml-7 mt-6">
-                  <img
-                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Salesforce.com_logo.svg/2560px-Salesforce.com_logo.svg.png"
-                    alt="Shoes"
-                  />
-                </figure>
-                <div className="card-body">
-                  <h2 className="card-title mb-8">Consulting</h2>
-                  <p>Process Audit</p>
-                  <p>KPI Setup</p>
-                  <p>Process Engineering</p>
-                  <p>Data Science</p>
-
-                  <svg 
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth={1.5}
-                    stroke="currentColor"
-                    className="w-10 h-10 mt-5"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
+          {data2.length !== 0 ? (
+            <div className=" mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t rounded-lg  border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-4">
+              {data2.map((post) => (
+                <div className="card max-w-sm  bg-white  shadow-xl">
+                  <figure className="w-28 ml-7 mt-6">
+                    <img
+                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Salesforce.com_logo.svg/2560px-Salesforce.com_logo.svg.png"
+                      alt="Shoes"
                     />
-                  </svg>
+                  </figure>
+                  <div className="card-body">
+                    <h2 className="card-title mb-8">Consulting</h2>
+                    <p>Process Audit</p>
+                    <p>KPI Setup</p>
+                    <p>Process Engineering</p>
+                    <p>Data Science</p>
+
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      strokeWidth={1.5}
+                      stroke="currentColor"
+                      className="w-10 h-10 mt-5"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
+                      />
+                    </svg>
+                  </div>
                 </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          ) : (
+            <div className=" mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t rounded-lg  border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-4">
+              {data.map((post) => (
+                <div className="card max-w-sm  bg-white  shadow-xl">
+                  <figure className="w-28 ml-7 mt-6">
+                    <Skeleton circle={true} width={100} height={100} />
+                  </figure>
+                  <div className="card-body">
+                    <h2 className="card-title mb-8">
+                      <Skeleton />
+                    </h2>
+                    <p>
+                      <Skeleton />
+                    </p>
+                    <p>
+                      <Skeleton />
+                    </p>
+                    <p>
+                      <Skeleton />
+                    </p>
+                    <p>
+                      <Skeleton />
+                    </p>
+
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      strokeWidth={1.5}
+                      stroke="currentColor"
+                      className="w-10 h-10 mt-5"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
       </div>
 
