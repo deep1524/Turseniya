@@ -12,7 +12,7 @@ const Slider = () => {
         </div>
         {/* <!-- Item 2 --> */}
         <div className="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="https://qfnextseoimgs.netlify.app/images/tachnology_bg.png" className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
+            <img src="https://images.pexels.com/photos/34092/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=600" className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
         </div>
         {/* <!-- Item 3 --> */}
         <div className="hidden duration-700 ease-in-out" data-carousel-item>

@@ -213,7 +213,7 @@ const Home = () => {
         </div>
         <div id="slide2" className="carousel-item relative w-full">
           <img
-            src="https://cdn.w600.comps.canstockphoto.com/technology-in-the-hands-picture_csp18139270.jpg"
+            src="https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2023/06/Website-Development-alt-1.webp"
             className="w-full object-cover"
           />
           <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
@@ -241,7 +241,7 @@ const Home = () => {
         </div>
         <div id="slide4" className="carousel-item relative w-full">
           <img
-            src="/images/stock/photo-1665553365602-b2fb8e5d1707.jpg"
+            src="https://images.pexels.com/photos/34092/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=600"
             className="w-full object-cover"
           />
           <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
