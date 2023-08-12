@@ -3,8 +3,8 @@ import React from "react";
 const Footer = () => {
   return (
     <>
-      <footer className="footer p-10 bg-base-200 text-base-content max-w-full mx-auto">
-        <div>
+      <footer className="footer p-10 bg-base-200 text-base-content max-w-full mx-auto justify-around">
+        <div className="">
           <span className="footer-title">Industries</span>
           <a className="link link-hover">Banking & Financial Services</a>
           <a className="link link-hover">Consumer Goods & Distribution</a>
@@ -38,7 +38,9 @@ const Footer = () => {
           <a className="link link-hover">Cookie policy</a>
         </div>
       </footer>
-      <footer className="footer px-10 py-4 border-t bg-base-200 text-base-content border-base-300 max-w-full mx-auto">
+
+
+      <footer className="footer px-10 py-4 border-t bg-base-200 text-base-content border-base-300 max-w-full mx-auto justify-around">
         <div className="items-center grid-flow-col">
           <svg
             width="24"

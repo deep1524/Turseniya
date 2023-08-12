@@ -288,9 +288,9 @@ const Technologies = () => {
     }, 1000);
   }, []);
   return (
-    <div className="w-full mt-8">
+    <div className="w-full ">
       <Navbar />
-      <div className="-mt-20 w-full ">
+      <div className=" w-full ">
         <img
           className="w-full"
           src="https://qfnextseoimgs.netlify.app/images/tachnology_bg.png"
@@ -330,8 +330,8 @@ const Technologies = () => {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto mt-2 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t rounded-lg  border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-2">
             <div>
-              <p className=" text-2xl mb-4 text-black">Technology Simplified</p>
-              <p>
+              <p className=" text-2xl mb-4 text-black font-bold">Technology Simplified</p>
+              <p className=" text-white">
                 Before the days of ubiquitous SaaS products and services, tech
                 stacks were relatively simple: there was LAMP (Linux, Apache,
                 MySQL, PHP), an older standard for building PHP-based web

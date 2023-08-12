@@ -9,105 +9,33 @@ const Home = () => {
   const posts = [
     {
       id: 1,
-      title: "Boost your conversion rate",
-      href: "#",
-      description:
-        "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.",
-      date: "Mar 16, 2020",
-      datetime: "2020-03-16",
-      category: { title: "Marketing", href: "#" },
-      author: {
-        name: "Michael Foster",
-        role: "Co-Founder / CTO",
-        href: "#",
-        imageUrl:
-          "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-      },
+      title: "Served 85+",
+      href: "https://quadrafort.com/_next/static/media/writing.6d7f549b.png",
+      description: "Enterprise customers Worldwide",
     },
     {
       id: 2,
-      title: "Boost your conversion rate",
-      href: "#",
-      description:
-        "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.",
-      date: "Mar 16, 2020",
-      datetime: "2020-03-16",
-      category: { title: "Marketing", href: "#" },
-      author: {
-        name: "Michael Foster",
-        role: "Co-Founder / CTO",
-        href: "#",
-        imageUrl:
-          "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-      },
+      title: "Team Of 150+",
+      href: "https://quadrafort.com/_next/static/media/team.1758dfb6.png",
+      description: "Information Technology professionals",
     },
     {
       id: 3,
-      title: "Boost your conversion rate",
-      href: "#",
-      description:
-        "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.",
-      date: "Mar 16, 2020",
-      datetime: "2020-03-16",
-      category: { title: "Marketing", href: "#" },
-      author: {
-        name: "Michael Foster",
-        role: "Co-Founder / CTO",
-        href: "#",
-        imageUrl:
-          "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-      },
+      title: "ISO 27001:2013, ISO 9001:2015",
+      href: "https://quadrafort.com/_next/static/media/guarantee.f07c1902.png",
+      description: "And PCI-DSS certified",
     },
     {
       id: 4,
-      title: "Boost your conversion rate",
-      href: "#",
-      description:
-        "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.",
-      date: "Mar 16, 2020",
-      datetime: "2020-03-16",
-      category: { title: "Marketing", href: "#" },
-      author: {
-        name: "Michael Foster",
-        role: "Co-Founder / CTO",
-        href: "#",
-        imageUrl:
-          "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-      },
+      title: "CMMi Level 5",
+      href: "https://quadrafort.com/_next/static/media/four-stars.f6f24ed1.png",
+      description: "Compliance Certification",
     },
     {
       id: 5,
-      title: "Boost your conversion rate",
-      href: "#",
-      description:
-        "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.",
-      date: "Mar 16, 2020",
-      datetime: "2020-03-16",
-      category: { title: "Marketing", href: "#" },
-      author: {
-        name: "Michael Foster",
-        role: "Co-Founder / CTO",
-        href: "#",
-        imageUrl:
-          "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-      },
-    },
-    {
-      id: 6,
-      title: "Boost your conversion rate",
-      href: "#",
-      description:
-        "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.",
-      date: "Mar 16, 2020",
-      datetime: "2020-03-16",
-      category: { title: "Marketing", href: "#" },
-      author: {
-        name: "Michael Foster",
-        role: "Co-Founder / CTO",
-        href: "#",
-        imageUrl:
-          "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-      },
+      title: "Great Place To Work",
+      href: "https://quadrafort.com/_next/static/media/office-worker.e1a46af0.png",
+      description: "Certified March 2023-March 2024",
     },
 
     // More posts...
@@ -115,71 +43,45 @@ const Home = () => {
   const data = [
     {
       id: 1,
-      title: "Boost your conversion rate",
-      href: "#",
+      title: "SAP",
+      href: "https://quadrafort.com/_next/static/media/sap.bb527bb8.png",
       description:
-        "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.",
-      date: "Mar 16, 2020",
-      datetime: "2020-03-16",
-      category: { title: "Marketing", href: "#" },
-      author: {
-        name: "Michael Foster",
-        role: "Co-Founder / CTO",
-        href: "#",
-        imageUrl:
-          "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-      },
+        "SAP solution is tailored to support your business needs in your industry and any geography for the digital age.",
     },
     {
       id: 2,
-      title: "Boost your conversion rate",
-      href: "#",
+      title: "Salesforce",
+      href: "https://quadrafort.com/_next/static/media/salesforce.ab4bbabd.png",
       description:
-        "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.",
-      date: "Mar 16, 2020",
-      datetime: "2020-03-16",
-      category: { title: "Marketing", href: "#" },
-      author: {
-        name: "Michael Foster",
-        role: "Co-Founder / CTO",
-        href: "#",
-        imageUrl:
-          "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-      },
+        "Get back to growth with the world’s #1 CRM, powered by Customer 360 to deliver seamless customer experiences across multiple business units and touchpoints.",
     },
     {
       id: 3,
-      title: "Boost your conversion rate",
-      href: "#",
+      title: "Checkpoint",
+      href: "https://quadrafort.com/_next/static/media/checkpoint.07972013.png",
       description:
-        "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.",
-      date: "Mar 16, 2020",
-      datetime: "2020-03-16",
-      category: { title: "Marketing", href: "#" },
-      author: {
-        name: "Michael Foster",
-        role: "Co-Founder / CTO",
-        href: "#",
-        imageUrl:
-          "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-      },
+        "Protect your enterprise network from the most sophisticated cyber-attacks with the highest caliber of security, and world’s highest performing security gateways.",
     },
     {
       id: 4,
-      title: "Boost your conversion rate",
-      href: "#",
+      title: "Liferay",
+      href: "https://quadrafort.com/_next/static/media/liferay-logo.91f93526.png",
       description:
-        "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.",
-      date: "Mar 16, 2020",
-      datetime: "2020-03-16",
-      category: { title: "Marketing", href: "#" },
-      author: {
-        name: "Michael Foster",
-        role: "Co-Founder / CTO",
-        href: "#",
-        imageUrl:
-          "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-      },
+        "The Complete Platform for Tailored Solutions Create custom digital experiences without sacrificing speed, flexibility, or cost.",
+    },
+    {
+      id: 5,
+      title: "AI",
+      href: "https://quadrafort.com/_next/static/media/ai.99c155dc.png",
+      description:
+        "AI's ability to adeptly work with data analytics is the primary reason why artificial intelligence and big data are now seemingly inseparable.",
+    },
+    {
+      id: 6,
+      title: "Business Process Re-engineering",
+      href: "https://quadrafort.com/_next/static/media/planning.18354fa0.png",
+      description:
+        "Involves the radical redesign of core business processes to achieve dramatic improvements in productivity, cycle times and quality.",
     },
 
     // More posts...
@@ -187,8 +89,8 @@ const Home = () => {
 
   useEffect(() => {
     setTimeout(function () {
-      setdata1(posts);
-      setdata2(data);
+      setdata1(data);
+      setdata2(posts);
     }, 1000);
   }, []);
 
@@ -277,16 +179,14 @@ const Home = () => {
                 <div className="card max-w-sm bg-base-100 shadow-xl">
                   <figure className="w-28 ml-7 mt-6">
                     <img
-                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Salesforce.com_logo.svg/2560px-Salesforce.com_logo.svg.png"
-                      alt="Shoes"
+                      className="w-48 h-24 object-contain"
+                      src={post.href}
+                      alt="logo"
                     />
                   </figure>
                   <div className="card-body">
-                    <h2 className="card-title">SAP</h2>
-                    <p>
-                      SAP solution is tailored to support your business needs in
-                      your industry and any geography for the digital age
-                    </p>
+                    <h2 className="card-title">{post.title}</h2>
+                    <p>{post.description}</p>
                     <p>Learn More</p>
                   </div>
                 </div>
@@ -294,7 +194,7 @@ const Home = () => {
             </div>
           ) : (
             <div className="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t rounded-lg  border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-              {posts.map((post) => (
+              {data.map((post) => (
                 <div className="card max-w-sm  shadow-xl">
                   <figure className="w-28 ml-7 mt-6">
                     <Skeleton circle={true} width={100} height={100} />
@@ -325,12 +225,27 @@ const Home = () => {
               Profile At A Glance
             </p>
           </div>
-          {data1.length !== 0 ? (
+          {data2.length !== 0 ? (
             <div className="mx-auto mt-2 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t rounded-lg  border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-              {data1.map((post) => (
+              {data2.map((post) => (
                 <div className="card max-w-sm bg-base-100 shadow-xl">
-                  <div className="artboard artboard-horizontal  h-60 bg-red-400 rounded-lg">
-                    568×320
+                  
+                  <div className="artboard artboard-horizontal  h-72 bg-red-400 rounded-lg">
+                  <h1 className="pr-10  text-end">{post.id}</h1>
+                    <figure className="w-28 ml-7 mt-6">
+                      
+                      <img
+                        className="w-48 h-24 object-contain"
+                        src={post.href}
+                        alt="logo"
+                      />
+                    </figure>
+                    <div className="card-body">
+                      
+                      <h2 className="card-title text-slate-600">{post.title}</h2>
+                      <p className="text-slate-600">{post.description}</p>
+                      <p className="text-slate-600">Learn More</p>
+                    </div>
                   </div>
                 </div>
               ))}
@@ -340,16 +255,26 @@ const Home = () => {
               {" "}
               {posts.map((post) => (
                 <div className="card max-w-sm bg-base-100 shadow-xl">
-                  <div className="artboard artboard-horizontal  h-60 bg-white rounded-lg">
-                    <h1>
-                      <Skeleton />{" "}
-                    </h1>
+                  <div className="artboard artboard-horizontal  h-72 bg-white rounded-lg">
+                    <figure className="w-28 ml-7 mt-6">
+                      <Skeleton circle={true} width={100} height={100} />
+                    </figure>
+                    <div className="card-body">
+                      <h2>
+                        <Skeleton />
+                      </h2>
+                      <p>
+                        <Skeleton />
+                      </p>
+                      <p>
+                        <Skeleton />
+                      </p>
+                    </div>
                   </div>
                 </div>
               ))}{" "}
             </div>
           )}
-          // skelton start // skelton end
         </div>
       </div>
 

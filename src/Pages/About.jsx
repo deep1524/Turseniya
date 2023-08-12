@@ -103,9 +103,9 @@ const About = () => {
   }, []);
 
   return (
-    <div className="w-full mt-8">
+    <div className="w-full">
       <Navbar />
-      <div className="-mt-20">
+      <div className="">
         <img className='w-full' src="https://qfnextseoimgs.netlify.app/images/aboutusbg.jpg"></img>
       </div>
 
