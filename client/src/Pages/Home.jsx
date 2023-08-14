@@ -6,6 +6,8 @@ import "react-loading-skeleton/dist/skeleton.css";
 const Home = () => {
   const [data1, setdata1] = useState([]);
   const [data2, setdata2] = useState([]);
+  const [data3,setdata3] = useState([]);
+  const [data4,setdata4] = useState([]);
   const posts = [
     {
       id: 1,
@@ -84,13 +86,115 @@ const Home = () => {
         "Involves the radical redesign of core business processes to achieve dramatic improvements in productivity, cycle times and quality.",
     },
 
-    // More posts...
+   
   ];
-
+  const whatwedo = [
+    {
+      id: 1,
+      title: "Consulting",
+      href: "https://quadrafort.com/_next/static/media/brainstorming.47dc808d.png",
+      description1: "Process Audit",
+      description2: "KPI Setup",
+      description3: "Process Engineering",
+      description4: "Data Science",
+    },
+    {
+      id: 2,
+      title: "Solution Implementation",
+      href: "https://quadrafort.com/_next/static/media/solution.83412b37.png",
+      description1: "implementation",
+      description2: "System Integration",
+      description3: "Migration",
+      description4: "",
+    },
+    {
+      id: 3,
+      title: "Audit and Optimization",
+      href: "https://quadrafort.com/_next/static/media/search.002afecd.png",
+      description1: "Quality Audit",
+      description2: "Best practice",
+      description3: "Product Re-Engineering​",
+      description4: "",
+    },
+    {
+      id: 4,
+      title: "Support and Adoption",
+      href: "https://quadrafort.com/_next/static/media/technical-support.ade4add2.png",
+      description1: "Dedicated Support",
+      description2: "Change Management",
+      description3: "SLA Based Support​",
+      description4: "Training",
+    },
+ 
+  ];
+  const ourcore = [
+    {
+      id: 1,
+      title: "Contemporary",
+      href: "https://quadrafort.com/_next/static/media/contemporary.405c0900.jpg",
+      description:"Our team has expertise in a host of contemporary solutions such as Salesforce, SAP Tableau, MuleSoft, CPQ, Custom development, and Industry specific clouds .",
+     
+    },
+    {
+      id: 2,
+      title: "Expertise",
+      href: "https://quadrafort.com/_next/static/media/expert.ece91262.jpg",
+      description:"Our team is 100% certified and has the experience of working in various domain as well as industry verticals with our subject matter experts adding value at every step .",
+     
+    },
+    {
+      id: 3,
+      title: "Value Added Services",
+      href: "https://quadrafort.com/_next/static/media/value.eb3d3ccc.jpg",
+      description:"Along with product implementation, we also re–engineering offer process consulting and services which are some of the crucial offerings from our portfolio. We assist the enterprise with a complete adoption of new technology.",
+     
+    },
+    {
+      id: 4,
+      title: "Templatized Delivery Approach",
+      href: "https://quadrafort.com/_next/static/media/approach.d8d85bfb.jpg",
+      description:"Our quick start templates are defined business process wise and industry wise and are enriched with best practices and industry standards.",
+     
+    },
+ 
+  ];
+  const forskelton = [
+    {
+      id: 1,
+      title: "Contemporary",
+      href: "https://quadrafort.com/_next/static/media/contemporary.405c0900.jpg",
+      description:"Our team has expertise in a host of contemporary solutions such as Salesforce, SAP Tableau, MuleSoft, CPQ, Custom development, and Industry specific clouds .",
+     
+    },
+    {
+      id: 2,
+      title: "Expertise",
+      href: "https://quadrafort.com/_next/static/media/expert.ece91262.jpg",
+      description:"Our team is 100% certified and has the experience of working in various domain as well as industry verticals with our subject matter experts adding value at every step .",
+     
+    },
+    {
+      id: 3,
+      title: "Value Added Services",
+      href: "https://quadrafort.com/_next/static/media/value.eb3d3ccc.jpg",
+      description:"Along with product implementation, we also re–engineering offer process consulting and services which are some of the crucial offerings from our portfolio. We assist the enterprise with a complete adoption of new technology.",
+     
+    },
+    {
+      id: 4,
+      title: "Templatized Delivery Approach",
+      href: "https://quadrafort.com/_next/static/media/approach.d8d85bfb.jpg",
+      description:"Our quick start templates are defined business process wise and industry wise and are enriched with best practices and industry standards.",
+     
+    },
+ 
+  ];
   useEffect(() => {
     setTimeout(function () {
       setdata1(data);
       setdata2(posts);
+      setdata3(whatwedo);
+      setdata4(ourcore);
     }, 1000);
   }, []);
 
@@ -288,32 +392,31 @@ const Home = () => {
             </p>
           </div>
 
-          {data2.length !== 0 ? (
+          {data4.length !== 0 ? (
             <div className="mx-auto mt-2 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t rounded-lg  border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-4">
-              {data2.map((post) => (
+              {data4.map((post) => (
                 <div className="card card-compact max-w-sm bg-base-100 shadow-xl">
                   <figure>
-                    <img
-                      src="https://media.istockphoto.com/id/506910700/photo/i-can-do-it.jpg?s=612x612&w=0&k=20&c=4r5UQKSwjtVyLai0R0B38RJXX2SFr0TpK4JFSWnVCfQ="
+                    <img className="w-full h-64 "
+                      src={post.href}
                       alt="Shoes"
                     />
                   </figure>
                   <div className="card-body bg-white">
                     <h2 className="card-title font-bold text-black">
-                      Contemporary
+                      {post.title}
                     </h2>
                     <p className="mt-10 mb-10 text-black">
-                      Our team has expertise in a host of contemporary solutions
-                      such as Salesforce, SAP,...
+                    {post.description}
                     </p>
-                    <p className="text-black">Learn More</p>
+                    {/* <p className="text-black">Learn More</p> */}
                   </div>
                 </div>
               ))}
             </div>
           ) : (
             <div className="mx-auto mt-2 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t rounded-lg  border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-4">
-              {data.map((post) => (
+              {forskelton.map((post) => (
                 <div className="card card-compact max-w-sm  shadow-xl">
                   <figure>
                     <Skeleton width={300} height={200} />
@@ -325,9 +428,7 @@ const Home = () => {
                     <p className="mt-10 mb-10 text-black">
                       <Skeleton />
                     </p>
-                    <p className="text-black">
-                      <Skeleton />
-                    </p>
+                   
                   </div>
                 </div>
               ))}
@@ -345,22 +446,23 @@ const Home = () => {
               What We Do?
             </p>
           </div>
-          {data2.length !== 0 ? (
+          {data3.length !== 0 ? (
             <div className=" mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t rounded-lg  border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-4">
-              {data2.map((post) => (
+              {data3.map((post) => (
                 <div className="card max-w-sm  bg-white  shadow-xl">
                   <figure className="w-28 ml-7 mt-6">
                     <img
-                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Salesforce.com_logo.svg/2560px-Salesforce.com_logo.svg.png"
-                      alt="Shoes"
+                      src={post.href}
+                      alt="logo"
                     />
                   </figure>
                   <div className="card-body">
-                    <h2 className="card-title mb-8">Consulting</h2>
-                    <p>Process Audit</p>
-                    <p>KPI Setup</p>
-                    <p>Process Engineering</p>
-                    <p>Data Science</p>
+                    <h2 className="card-title mb-8">{post.title}</h2>
+                    <p>{post.description1}</p>
+                    <p>{post.description2}</p>
+                    <p>{post.description3}</p>
+                    <p>{post.description4}</p>
+                    
 
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -382,7 +484,7 @@ const Home = () => {
             </div>
           ) : (
             <div className=" mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t rounded-lg  border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-4">
-              {data.map((post) => (
+              {forskelton.map((post) => (
                 <div className="card max-w-sm  bg-white  shadow-xl">
                   <figure className="w-28 ml-7 mt-6">
                     <Skeleton circle={true} width={100} height={100} />
@@ -403,6 +505,7 @@ const Home = () => {
                     <p>
                       <Skeleton />
                     </p>
+                   
 
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
