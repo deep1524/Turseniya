@@ -48,7 +48,7 @@ const Careeers = () => {
   return (
     <div className="w-full mt-8">
       <Navbar />
-      <div className="">
+      <div className="w-full">
         <img
           className="w-full h-full object-fill"
           src="https://qfnextseoimgs.netlify.app/images/careerBanner.jpg"
@@ -57,13 +57,13 @@ const Careeers = () => {
       </div>
 
       {/* 3rd Section */}
-      <div className="bg-white py-28 sm:py-32 ">
+      <div className="bg-white py-28 sm:py-32  ">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:text-center">
             <p className="-mt-20 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
               Our Values
             </p>
-            <p className="mt-5 text-lg text-gray-500">
+            <p className="mt-5 text-lg text-gray-500 ">
               If you are an aggressive go-getter with a mind bend to excel in
               your domain, Quadrafort is the place for you. Join the team to
               make a mark for yourself and enjoy one of the best rewarding
@@ -72,14 +72,14 @@ const Careeers = () => {
           </div>
 
           {careersdata.length !== 0 ? (
-            <div className="mx-auto mt-2 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t rounded-lg  border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+            <div className="mx-auto mt-2 grid max-w-3xl  sm:grid-cols-2  gap-x-8 gap-y-16 border-t rounded-lg  border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
               {careersdata.map((post) => (
-                <div className="card card-compact max-w-sm  shadow-xl bg-white">
-                  <div className="card-body">
+                <div key={post.id} className="card card-compact max-w-sm  shadow-xl bg-white">
+                  <div className="card-body ">
                     <h2 className="card-title font-bold text-3xl text-black  pt-10">
                       {post.title}
                     </h2>
-                    <p className="text-base">
+                    <p className="text-base ">
                       We make things easier and we make our work place fun
                       filled where our team enjoys working together
                     </p>
@@ -93,7 +93,7 @@ const Careeers = () => {
           ) : (
             <div className="mx-auto mt-2 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t rounded-lg  border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
               {data.map((post) => (
-                <div className="card card-compact max-w-sm  shadow-xl bg-white">
+                <div key={post.id} className="card card-compact max-w-sm  shadow-xl bg-white">
                   <div className="card-body">
                     <h2 className=" font-bold text-3xl text-black  pt-10">
                       <Skeleton />

@@ -305,7 +305,7 @@ const Technologies = () => {
               Technologies
             </p>
           </div>
-          {technologydata.length!==0 ? <div className="mx-auto mt-2 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t rounded-lg  border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-4 ">
+          {technologydata.length!==0 ? <div className="mx-auto mt-2 grid max-w-2xl sm:grid-cols-2 gap-x-8 gap-y-16 border-t rounded-lg  border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-4 ">
             {technologydata.map((post) => (
               <div className="card card-compact max-w-sm shadow-xl h-60 bg-white ">
                 <figure className="w-48 h-48 mx-auto mt-auto mb-auto p-10 ">
@@ -313,7 +313,7 @@ const Technologies = () => {
                 </figure>
               </div>
             ))}
-          </div> : <div className="mx-auto mt-2 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t rounded-lg  border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-4 ">
+          </div> : <div className="mx-auto mt-2 grid max-w-2xl sm:grid-cols-2 gap-x-8 gap-y-16 border-t rounded-lg  border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-4 ">
             {data.map((post) => (
               <div className="card card-compact max-w-sm shadow-xl h-60 bg-white">
                 <figure className="w-40 h-40 mx-auto mt-auto mb-auto ">

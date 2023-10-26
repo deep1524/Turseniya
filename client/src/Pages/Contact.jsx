@@ -42,13 +42,13 @@ const Contact = () => {
 
   return (
     <div className="w-full">
-      <Navbar />
+      {/* <Navbar /> */}
       <div className="">
         <img src="https://qfnextseoimgs.netlify.app/images/CONTACT-US.jpg"></img>
       </div>
 
       <div className="bg-gradient-to-r from-violet-500 to-fuchsia-500 py-4 sm:py-4 ">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl px-6 lg:px-2">
           <div className="mx-auto  grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 rounded-lg  border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-2">
             <div className=" rounded-2xl -mt-20 mb-5">
               <figure>

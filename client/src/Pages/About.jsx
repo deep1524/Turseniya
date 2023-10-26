@@ -191,7 +191,7 @@ const About = () => {
               What We Do?
             </p>
           </div>
-          {aboutdata.length!==0? <div className=" mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t rounded-lg  border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+          {aboutdata.length!==0? <div className=" mx-auto mt-10 grid max-w-2xl sm:grid-cols-2 gap-x-8 gap-y-16 border-t rounded-lg  border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
             {aboutdata.map((post) => (
               <div className="card max-w-md max-h-96  bg-white  shadow-xl">
                 <figure className="w-28 ml-7 mt-6">
@@ -209,7 +209,7 @@ const About = () => {
                 </div>
               </div>
             ))}
-          </div> : <div className=" mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t rounded-lg  border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+          </div> : <div className=" mx-auto mt-10 grid max-w-2xl sm:grid-cols-2 gap-x-8 gap-y-16 border-t rounded-lg  border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
             {whatwedo.map((post) => (
               <div className="card max-w-md max-h-96  bg-white  shadow-xl">
                 <figure className="w-28 ml-7 mt-6">
@@ -237,7 +237,7 @@ const About = () => {
               Quadrafort Excellence Framework
             </p>
           </div>
-          {aboutdata1.length!==0 ?<div className="mx-auto mt-2 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t rounded-lg  border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+          {aboutdata1.length!==0 ?<div className="mx-auto mt-2 grid max-w-2xl sm:grid-cols-2 gap-x-8 gap-y-16 border-t rounded-lg  border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
             {aboutdata1.map((post) => (
               <div className="card card-compact max-w-sm bg-base-100 shadow-xl">
                 <figure>
@@ -265,7 +265,7 @@ const About = () => {
                 </div>
               </div>
             ))}
-          </div> :<div className="mx-auto mt-2 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t rounded-lg  border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+          </div> :<div className="mx-auto mt-2 grid max-w-2xl sm:grid-cols-2 gap-x-8 gap-y-16 border-t rounded-lg  border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
             {forskelton.map((post) => (
               <div className="card card-compact max-w-sm  shadow-xl">
                 <figure>
