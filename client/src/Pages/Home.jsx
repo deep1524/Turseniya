@@ -280,7 +280,7 @@ const Home = () => {
           {data1.length != 0 ? (
             <div className="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t rounded-lg  border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
               {data1.map((post) => (
-                <div className="card max-w-sm bg-base-100 shadow-xl">
+                <div key={post.id} className="card max-w-sm bg-base-100 shadow-xl">
                   <figure className="w-28 ml-7 mt-6">
                     <img
                       className="w-48 h-24 object-contain"
@@ -299,7 +299,7 @@ const Home = () => {
           ) : (
             <div className="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t rounded-lg  border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
               {data.map((post) => (
-                <div className="card max-w-sm  shadow-xl">
+                <div key={post.id} className="card max-w-sm  shadow-xl">
                   <figure className="w-28 ml-7 mt-6">
                     <Skeleton circle={true} width={100} height={100} />
                   </figure>
@@ -332,7 +332,7 @@ const Home = () => {
           {data2.length !== 0 ? (
             <div className="mx-auto mt-2 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t rounded-lg  border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
               {data2.map((post) => (
-                <div className="card max-w-sm bg-base-100 shadow-xl">
+                <div key={post.id} className="card max-w-sm bg-base-100 shadow-xl">
                   
                   <div className="artboard artboard-horizontal  h-72 bg-red-400 rounded-lg">
                   <h1 className="pr-10  text-end">{post.id}</h1>
@@ -358,7 +358,7 @@ const Home = () => {
             <div className="mx-auto mt-2 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t rounded-lg  border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
               {" "}
               {posts.map((post) => (
-                <div className="card max-w-sm bg-base-100 shadow-xl">
+                <div key={post.id} className="card max-w-sm bg-base-100 shadow-xl">
                   <div className="artboard artboard-horizontal  h-72 bg-white rounded-lg">
                     <figure className="w-28 ml-7 mt-6">
                       <Skeleton circle={true} width={100} height={100} />
@@ -395,7 +395,7 @@ const Home = () => {
           {data4.length !== 0 ? (
             <div className="mx-auto mt-2 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t rounded-lg  border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-4">
               {data4.map((post) => (
-                <div className="card card-compact max-w-sm bg-base-100 shadow-xl">
+                <div key={post.id} className="card card-compact max-w-sm bg-base-100 shadow-xl">
                   <figure>
                     <img className="w-full h-64 "
                       src={post.href}
@@ -417,7 +417,7 @@ const Home = () => {
           ) : (
             <div className="mx-auto mt-2 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t rounded-lg  border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-4">
               {forskelton.map((post) => (
-                <div className="card card-compact max-w-sm  shadow-xl">
+                <div key={post.id} className="card card-compact max-w-sm  shadow-xl">
                   <figure>
                     <Skeleton width={300} height={200} />
                   </figure>
@@ -449,7 +449,7 @@ const Home = () => {
           {data3.length !== 0 ? (
             <div className=" mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t rounded-lg  border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-4">
               {data3.map((post) => (
-                <div className="card max-w-sm  bg-white  shadow-xl">
+                <div key={post.id} className="card max-w-sm  bg-white  shadow-xl">
                   <figure className="w-28 ml-7 mt-6">
                     <img
                       src={post.href}
@@ -485,7 +485,7 @@ const Home = () => {
           ) : (
             <div className=" mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t rounded-lg  border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-4">
               {forskelton.map((post) => (
-                <div className="card max-w-sm  bg-white  shadow-xl">
+                <div key={post.id} className="card max-w-sm  bg-white  shadow-xl">
                   <figure className="w-28 ml-7 mt-6">
                     <Skeleton circle={true} width={100} height={100} />
                   </figure>

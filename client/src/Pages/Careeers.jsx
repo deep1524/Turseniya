@@ -3,6 +3,8 @@ import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
+import Aos from "aos";
+import "aos/dist/aos.css";
 const Careeers = () => {
   const [careersdata, setcareersdata] = useState([]);
   const data = [
@@ -40,6 +42,9 @@ const Careeers = () => {
     // More posts...
   ];
 
+  useEffect(()=>{
+Aos.init({duration:2000});
+  },[Aos.refresh()])
   useEffect(() => {
     setTimeout(function () {
       setcareersdata(data);
@@ -74,7 +79,7 @@ const Careeers = () => {
           {careersdata.length !== 0 ? (
             <div className="mx-auto mt-2 grid max-w-3xl  sm:grid-cols-2  gap-x-8 gap-y-16 border-t rounded-lg  border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
               {careersdata.map((post) => (
-                <div key={post.id} className="card card-compact max-w-sm  shadow-xl bg-white">
+                <div key={post.id} data-aos="fade-up-left" className="card card-compact max-w-sm  shadow-xl bg-white">
                   <div className="card-body ">
                     <h2 className="card-title font-bold text-3xl text-black  pt-10">
                       {post.title}

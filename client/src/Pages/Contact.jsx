@@ -42,7 +42,7 @@ const Contact = () => {
 
   return (
     <div className="w-full">
-      {/* <Navbar /> */}
+      <Navbar />
       <div className="">
         <img src="https://qfnextseoimgs.netlify.app/images/CONTACT-US.jpg"></img>
       </div>

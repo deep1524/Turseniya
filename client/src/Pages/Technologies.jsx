@@ -3,8 +3,10 @@ import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
+import Aos from "aos";
+import "aos/dist/aos.css";
 const Technologies = () => {
-  const [technologydata, settechnologydata] = useState([])
+  const [technologydata, settechnologydata] = useState([]);
   const data = [
     {
       id: 1,
@@ -126,7 +128,7 @@ const Technologies = () => {
       },
     },
     {
-      id: 5,
+      id: 8,
       title: "Boost your conversion rate",
       href: "http://quadrafort.com/_next/static/media/tech_flutterlogo.7626e0a9.png",
       description:
@@ -143,7 +145,7 @@ const Technologies = () => {
       },
     },
     {
-      id: 8,
+      id: 9,
       title: "Boost your conversion rate",
       href: "http://quadrafort.com/_next/static/media/tech_nodejslogo.68e97f61.png",
       description:
@@ -160,7 +162,7 @@ const Technologies = () => {
       },
     },
     {
-      id: 9,
+      id: 10,
       title: "Boost your conversion rate",
       href: "http://quadrafort.com/_next/static/media/MongoDB_Logo.ac22d621.png",
       description:
@@ -177,7 +179,7 @@ const Technologies = () => {
       },
     },
     {
-      id: 10,
+      id: 11,
       title: "Boost your conversion rate",
       href: "http://quadrafort.com/_next/static/media/tech_jquery.79036d37.png",
       description:
@@ -194,7 +196,7 @@ const Technologies = () => {
       },
     },
     {
-      id: 11,
+      id: 12,
       title: "Boost your conversion rate",
       href: "http://quadrafort.com/_next/static/media/tech_ms-logo.4c4cdd47.png",
       description:
@@ -211,7 +213,7 @@ const Technologies = () => {
       },
     },
     {
-      id: 12,
+      id: 13,
       title: "Boost your conversion rate",
       href: "http://quadrafort.com/_next/static/media/tech_heroku.d81bfd8e.png",
       description:
@@ -228,7 +230,7 @@ const Technologies = () => {
       },
     },
     {
-      id: 13,
+      id: 14,
       title: "Boost your conversion rate",
       href: "http://quadrafort.com/_next/static/media/tech_reactlogo.479af87f.png",
       description:
@@ -245,7 +247,7 @@ const Technologies = () => {
       },
     },
     {
-      id: 14,
+      id: 15,
       title: "Boost your conversion rate",
       href: "http://quadrafort.com/_next/static/media/tech_pwalogo.4aa00d6d.png",
       description:
@@ -262,7 +264,7 @@ const Technologies = () => {
       },
     },
     {
-      id: 15,
+      id: 16,
       title: "Boost your conversion rate",
       href: "http://quadrafort.com/_next/static/media/tech_java.efa89eb2.png",
       description:
@@ -282,8 +284,10 @@ const Technologies = () => {
     // More posts...
   ];
   useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, [Aos.refresh()]);
+  useEffect(() => {
     setTimeout(function () {
-     
       settechnologydata(data);
     }, 1000);
   }, []);
@@ -305,24 +309,27 @@ const Technologies = () => {
               Technologies
             </p>
           </div>
-          {technologydata.length!==0 ? <div className="mx-auto mt-2 grid max-w-2xl sm:grid-cols-2 gap-x-8 gap-y-16 border-t rounded-lg  border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-4 ">
-            {technologydata.map((post) => (
-              <div className="card card-compact max-w-sm shadow-xl h-60 bg-white ">
-                <figure className="w-48 h-48 mx-auto mt-auto mb-auto p-10 ">
-                  <img className="object-cover"  src={post.href} alt="aws" />
-                </figure>
-              </div>
-            ))}
-          </div> : <div className="mx-auto mt-2 grid max-w-2xl sm:grid-cols-2 gap-x-8 gap-y-16 border-t rounded-lg  border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-4 ">
-            {data.map((post) => (
-              <div className="card card-compact max-w-sm shadow-xl h-60 bg-white">
-                <figure className="w-40 h-40 mx-auto mt-auto mb-auto ">
-                 <Skeleton width={200} height={200}/>
-                </figure>
-              </div>
-            ))}
-          </div>}
-         
+          {technologydata.length !== 0 ? (
+            <div className="mx-auto mt-2 grid max-w-2xl sm:grid-cols-2 gap-x-8 gap-y-16 border-t rounded-lg  border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-4 ">
+              {technologydata.map((post) => (
+                <div key={post.id} data-aos="fade-down-right" className="card card-compact max-w-sm shadow-xl h-60 bg-white ">
+                  <figure className="w-48 h-48 mx-auto mt-auto mb-auto p-10 ">
+                    <img className="object-cover" src={post.href} alt="aws" />
+                  </figure>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div className="mx-auto mt-2 grid max-w-2xl sm:grid-cols-2 gap-x-8 gap-y-16 border-t rounded-lg  border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-4 ">
+              {data.map((post) => (
+                <div key={post.id} className="card card-compact max-w-sm shadow-xl h-60 bg-white">
+                  <figure className="w-40 h-40 mx-auto mt-auto mb-auto ">
+                    <Skeleton width={200} height={200} />
+                  </figure>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
       </div>
       {/* // 2nd Section  */}
@@ -330,7 +337,9 @@ const Technologies = () => {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto mt-2 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t rounded-lg  border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-2">
             <div>
-              <p className=" text-2xl mb-4 text-black font-bold">Technology Simplified</p>
+              <p className=" text-2xl mb-4 text-black font-bold">
+                Technology Simplified
+              </p>
               <p className=" text-white">
                 Before the days of ubiquitous SaaS products and services, tech
                 stacks were relatively simple: there was LAMP (Linux, Apache,
