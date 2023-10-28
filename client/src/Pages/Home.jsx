@@ -3,6 +3,27 @@ import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
+import one from "../image/1.webp";
+import two from "../image/2.webp";
+import three from "../image/3.webp";
+import four from "../image/5.webp";
+import five from "../image/5.webp"
+import contempory from "../image/contemporary.webp";
+import Expertise from "../image/Expertise.webp";
+import Tem from "../image/Tem.jpg";
+import value from "../image/value.jpg";
+import Consulting from "../image/Consulting.webp";
+import Solution from "../image/solution.webp";
+import Audit from "../image/Audit.webp";
+import Technical from "../image/technical.webp";
+import Ai from "../image/ai.png";
+import Checkpoint from "../image/checkpoint.png";
+import Liferay from "../image/liferay.png";
+import Sap from "../image/sap.png";
+import Salesforce from "../image/salesforce.png";
+import Planning from "../image/planning.png";
+import Aos from "aos";
+import "aos/dist/aos.css";
 const Home = () => {
   const [data1, setdata1] = useState([]);
   const [data2, setdata2] = useState([]);
@@ -12,31 +33,31 @@ const Home = () => {
     {
       id: 1,
       title: "Served 85+",
-      href: "https://quadrafort.com/_next/static/media/writing.6d7f549b.png",
+      href: one,
       description: "Enterprise customers Worldwide",
     },
     {
       id: 2,
       title: "Team Of 150+",
-      href: "https://quadrafort.com/_next/static/media/team.1758dfb6.png",
+      href: two,
       description: "Information Technology professionals",
     },
     {
       id: 3,
       title: "ISO 27001:2013, ISO 9001:2015",
-      href: "https://quadrafort.com/_next/static/media/guarantee.f07c1902.png",
+      href: three,
       description: "And PCI-DSS certified",
     },
     {
       id: 4,
       title: "CMMi Level 5",
-      href: "https://quadrafort.com/_next/static/media/four-stars.f6f24ed1.png",
+      href: four,
       description: "Compliance Certification",
     },
     {
       id: 5,
       title: "Great Place To Work",
-      href: "https://quadrafort.com/_next/static/media/office-worker.e1a46af0.png",
+      href: five,
       description: "Certified March 2023-March 2024",
     },
 
@@ -46,42 +67,42 @@ const Home = () => {
     {
       id: 1,
       title: "SAP",
-      href: "https://quadrafort.com/_next/static/media/sap.bb527bb8.png",
+      href: Sap,
       description:
         "SAP solution is tailored to support your business needs in your industry and any geography for the digital age.",
     },
     {
       id: 2,
       title: "Salesforce",
-      href: "https://quadrafort.com/_next/static/media/salesforce.ab4bbabd.png",
+      href: Salesforce,
       description:
         "Get back to growth with the world’s #1 CRM, powered by Customer 360 to deliver seamless customer experiences across multiple business units and touchpoints.",
     },
     {
       id: 3,
       title: "Checkpoint",
-      href: "https://quadrafort.com/_next/static/media/checkpoint.07972013.png",
+      href: Checkpoint,
       description:
         "Protect your enterprise network from the most sophisticated cyber-attacks with the highest caliber of security, and world’s highest performing security gateways.",
     },
     {
       id: 4,
       title: "Liferay",
-      href: "https://quadrafort.com/_next/static/media/liferay-logo.91f93526.png",
+      href: Liferay,
       description:
         "The Complete Platform for Tailored Solutions Create custom digital experiences without sacrificing speed, flexibility, or cost.",
     },
     {
       id: 5,
       title: "AI",
-      href: "https://quadrafort.com/_next/static/media/ai.99c155dc.png",
+      href: Ai,
       description:
         "AI's ability to adeptly work with data analytics is the primary reason why artificial intelligence and big data are now seemingly inseparable.",
     },
     {
       id: 6,
       title: "Business Process Re-engineering",
-      href: "https://quadrafort.com/_next/static/media/planning.18354fa0.png",
+      href: Planning,
       description:
         "Involves the radical redesign of core business processes to achieve dramatic improvements in productivity, cycle times and quality.",
     },
@@ -92,7 +113,7 @@ const Home = () => {
     {
       id: 1,
       title: "Consulting",
-      href: "https://quadrafort.com/_next/static/media/brainstorming.47dc808d.png",
+      href: Consulting,
       description1: "Process Audit",
       description2: "KPI Setup",
       description3: "Process Engineering",
@@ -101,7 +122,7 @@ const Home = () => {
     {
       id: 2,
       title: "Solution Implementation",
-      href: "https://quadrafort.com/_next/static/media/solution.83412b37.png",
+      href: Solution,
       description1: "implementation",
       description2: "System Integration",
       description3: "Migration",
@@ -110,7 +131,7 @@ const Home = () => {
     {
       id: 3,
       title: "Audit and Optimization",
-      href: "https://quadrafort.com/_next/static/media/search.002afecd.png",
+      href: Audit,
       description1: "Quality Audit",
       description2: "Best practice",
       description3: "Product Re-Engineering​",
@@ -119,7 +140,7 @@ const Home = () => {
     {
       id: 4,
       title: "Support and Adoption",
-      href: "https://quadrafort.com/_next/static/media/technical-support.ade4add2.png",
+      href: Technical,
       description1: "Dedicated Support",
       description2: "Change Management",
       description3: "SLA Based Support​",
@@ -131,28 +152,28 @@ const Home = () => {
     {
       id: 1,
       title: "Contemporary",
-      href: "https://quadrafort.com/_next/static/media/contemporary.405c0900.jpg",
+      href: contempory,
       description:"Our team has expertise in a host of contemporary solutions such as Salesforce, SAP Tableau, MuleSoft, CPQ, Custom development, and Industry specific clouds .",
      
     },
     {
       id: 2,
       title: "Expertise",
-      href: "https://quadrafort.com/_next/static/media/expert.ece91262.jpg",
+      href:Expertise,
       description:"Our team is 100% certified and has the experience of working in various domain as well as industry verticals with our subject matter experts adding value at every step .",
      
     },
     {
       id: 3,
       title: "Value Added Services",
-      href: "https://quadrafort.com/_next/static/media/value.eb3d3ccc.jpg",
+      href: value,
       description:"Along with product implementation, we also re–engineering offer process consulting and services which are some of the crucial offerings from our portfolio. We assist the enterprise with a complete adoption of new technology.",
      
     },
     {
       id: 4,
       title: "Templatized Delivery Approach",
-      href: "https://quadrafort.com/_next/static/media/approach.d8d85bfb.jpg",
+      href: Tem,
       description:"Our quick start templates are defined business process wise and industry wise and are enriched with best practices and industry standards.",
      
     },
@@ -189,6 +210,10 @@ const Home = () => {
     },
  
   ];
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+    
+  }, [Aos.refresh()]);
   useEffect(() => {
     setTimeout(function () {
       setdata1(data);
@@ -280,7 +305,7 @@ const Home = () => {
           {data1.length != 0 ? (
             <div className="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t rounded-lg  border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
               {data1.map((post) => (
-                <div key={post.id} className="card max-w-sm bg-base-100 shadow-xl">
+                <div  data-aos="fade-up-right" key={post.id} className="card max-w-sm bg-base-100 shadow-xl">
                   <figure className="w-28 ml-7 mt-6">
                     <img
                       className="w-48 h-24 object-contain"
@@ -299,7 +324,7 @@ const Home = () => {
           ) : (
             <div className="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t rounded-lg  border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
               {data.map((post) => (
-                <div key={post.id} className="card max-w-sm  shadow-xl">
+                <div  key={post.id} className="card max-w-sm  shadow-xl">
                   <figure className="w-28 ml-7 mt-6">
                     <Skeleton circle={true} width={100} height={100} />
                   </figure>
@@ -332,7 +357,7 @@ const Home = () => {
           {data2.length !== 0 ? (
             <div className="mx-auto mt-2 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t rounded-lg  border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
               {data2.map((post) => (
-                <div key={post.id} className="card max-w-sm bg-base-100 shadow-xl">
+                <div data-aos="fade-up-left"  key={post.id} className="card max-w-sm bg-base-100 shadow-xl">
                   
                   <div className="artboard artboard-horizontal  h-72 bg-red-400 rounded-lg">
                   <h1 className="pr-10  text-end">{post.id}</h1>
@@ -395,7 +420,7 @@ const Home = () => {
           {data4.length !== 0 ? (
             <div className="mx-auto mt-2 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t rounded-lg  border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-4">
               {data4.map((post) => (
-                <div key={post.id} className="card card-compact max-w-sm bg-base-100 shadow-xl">
+                <div data-aos="fade-up-right"  key={post.id} className="card card-compact max-w-sm bg-base-100 shadow-xl">
                   <figure>
                     <img className="w-full h-64 "
                       src={post.href}
@@ -449,7 +474,7 @@ const Home = () => {
           {data3.length !== 0 ? (
             <div className=" mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t rounded-lg  border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-4">
               {data3.map((post) => (
-                <div key={post.id} className="card max-w-sm  bg-white  shadow-xl">
+                <div data-aos="fade-up-right"  key={post.id} className="card max-w-sm  bg-white  shadow-xl">
                   <figure className="w-28 ml-7 mt-6">
                     <img
                       src={post.href}

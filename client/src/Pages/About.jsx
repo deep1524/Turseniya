@@ -3,6 +3,16 @@ import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
+import Aboutus from "../image/About.jpg"; 
+import AboutCompany from "../image/AboutCompany.png";
+import CRM from "../image/CRM.png";
+import CyberSecurity from "../image/cyberSecurity.png";
+import Bussiness from "../image/bussinessIntelligence.png";
+import Adoption from "../image/Adoption.png";
+import Process from "../image/process.png";
+import Quality from "../image/quality.jpg";
+import Excellence from "../image/excellence.jpg";
+import Focus from "../image/focus.jpg";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
@@ -13,7 +23,7 @@ const About = () => {
     {
       id: 1,
       title: "Boost your conversion rate",
-      href: "https://quadrafort.com/_next/static/media/process.ae722d02.png",
+      href: Process,
       description: "Custom Application Development",
       description1: "Process Builder",
       description2: "Workflows",
@@ -22,7 +32,7 @@ const About = () => {
     {
       id: 2,
       title: "Business Intelligence & Advanced Analytics",
-      href: "https://quadrafort.com/_next/static/media/bussinessIntelligence.72bec94d.png",
+      href: Bussiness,
       description: "Data Analytics",
       description1: "Visualization",
       description2: "Advanced Analytics",
@@ -31,7 +41,7 @@ const About = () => {
     {
       id: 3,
       title: "Customer Relationship Management",
-      href: "https://quadrafort.com/_next/static/media/CRM.e946be7c.png",
+      href: CRM,
       description: "End to End Implementationt",
       description1: "Consulting",
       description2: "Migration & Integration",
@@ -40,7 +50,7 @@ const About = () => {
     {
       id: 4,
       title: "Adoption of new technologies",
-      href: "https://quadrafort.com/_next/static/media/DigitalTransformation.1a0ff890.png",
+      href: Adoption,
       description: "Cloud computing",
       description1: "Artificial intelligence & Big data analytics",
       description2: "Internet of Things (IoT)",
@@ -49,7 +59,7 @@ const About = () => {
     {
       id: 5,
       title: "Cyber security",
-      href: "https://quadrafort.com/_next/static/media/cyberSecurity.eb733f00.png",
+      href: CyberSecurity,
       description: "User access security",
       description1: "Network Security",
       description2: "Cloud Security",
@@ -63,7 +73,7 @@ const About = () => {
     {
       id: 1,
       title: "Quality",
-      href: "https://quadrafort.com/_next/static/media/quality.fdfba554.jpg",
+      href: Quality,
       description: "We are paranoid about quality",
       description1:
         "We have QMS systems to govern product and process related quality for the deliverables",
@@ -73,7 +83,7 @@ const About = () => {
     {
       id: 2,
       title: "Excellence",
-      href: "https://quadrafort.com/_next/static/media/excellence.2938e550.jpg",
+      href: Excellence,
       description: "Partner Excellence Working with the domain leaders",
       description1:
         "Resource Excellence Defined L&D framework with governance module",
@@ -85,7 +95,7 @@ const About = () => {
     {
       id: 3,
       title: "Focus",
-      href: "https://quadrafort.com/_next/static/media/focus.f6b503d8.jpg",
+      href:Focus,
       description:
         "We have a focused approach for different regions, industry and product portfolios",
       description1:
@@ -152,7 +162,7 @@ const About = () => {
       <div className="">
         <img
           className="w-full"
-          src="https://qfnextseoimgs.netlify.app/images/aboutusbg.jpg"
+          src={Aboutus}
         ></img>
       </div>
 
@@ -163,8 +173,8 @@ const About = () => {
             <div className="card-body bg-white">
               <figure>
                 <img
-                  src="https://quadrafort.com/_next/static/media/team-smile.25a95be6.png"
-                  alt="Shoes"
+                  src={AboutCompany}
+                  alt="company"
                 />
               </figure>
             </div>
